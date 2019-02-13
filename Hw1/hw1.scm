@@ -1,0 +1,72 @@
+;; Nhan Cao
+;; CS 380
+
+#lang racket
+
+(provide (all-defined-out))
+
+;; 1. degree->radian: double -> double
+;; return radian value of an angle from its degree value
+(define pi (* 4 (atan 1.0)))
+
+(define (degrees->radians d)
+  ; d/180*pi
+  (* d (/ pi 180))
+  )
+
+;; 2. distance: double x double -> double
+;; return the distance traveled in time t with velecity v
+(define (distance v t)
+  (* v t)
+  )
+
+;; 3. time-to-ground: double -> double
+;; return the time an object takes in ideal condition to reach the ground again
+;; after being launched from the ground with vertical velocity of vy
+(define g 9.8)
+(define (time-to-ground vy)
+  (/ (* 2 vy) g )
+  )
+
+;; 4. ball-distance: double x double -> double
+;; return the horizontal distance the ball traveled
+(define (ball-distance v theta)
+  ( distance
+    (* v (sin (degrees->radians theta)))
+    (time-to-ground (* v (cos (degrees->radians theta))))
+    )
+  )
+
+;; Exercise 1.15
+;; duple: integer x T -> listOf(T)
+;; return a list with a number of duplicates of a given item
+(define (duple n x)
+  (cond ((null? x) x)
+        ((= n 0) '())
+        (#t (cons x (duple (- n 1) x)))
+        )
+  )
+
+;; Exercise 1.17
+;; down: list -> list
+;; 
+(define (down lst)
+  (cond ((null? lst) lst)
+        (#t (cons
+             (list (car lst))
+             (down (cdr lst))))
+        )
+  )
+
+;; Exercise 1.19
+;; list-set: listOf(T) -> listOf(T)
+;;
+(define (list-set lst n x)
+  (cond ((null? lst) (error "Index out of range"))
+        ((not (= n 0)) (cons (car lst) (list-set (cdr lst) (- n 1) x)))
+        (#t (cons x (cdr lst)))
+        )
+  )
+
+;(list-set '(a b c d) 2 '(2 3))
+
