@@ -20,11 +20,19 @@
   ;; Page: 71
   (define (run string)
       (value-of-program (scan&parse string)))
+  
+  (define conds "cond {equal? (5, 4) ==> -(5, 3) } {equal? (5, 5) ==> minus(10)} end")
 
-;  (define f "let f = proc (x ) -(-(x, -15), 6) in (f 47)")
-;  (define l "letrec mul(x, y) =
-;                    if zero? (y) then 0 else -((mul x -(y, 1)), -(0, x))
-;                    in (mul 5 25)" )
+  ;(define minus "minus(5)")
+  (define printtest "print cond {equal? (5, 4) ==> -(5, 3) } {equal? (5, 5) ==> minus(10)} end")
+  (define pttest "print 5")
 
-)
+  (define x 6)
 
+
+
+  )
+
+
+
+;(cond-exp (list (equal?-exp (const-exp 5) (const-exp 5))) (list (minus (const-exp 10))))
