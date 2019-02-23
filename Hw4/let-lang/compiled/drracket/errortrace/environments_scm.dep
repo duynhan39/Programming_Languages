@@ -1,0 +1,1 @@
+("7.2" racket ("3df62e1859d47ee0c1f5a8687325a873a559f96a" . "c56f5b5e6ee71e9bf4c2ab9943b1e59f9e524bbd") #"/Users/macbookpro/Programming/Programming_Languages/Hw4/let-lang/data-structures.scm" (collects #"eopl" #"eopl.rkt") (collects #"errortrace" #"errortrace-key.rkt"))

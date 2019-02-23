@@ -71,29 +71,11 @@
 ;(list-set '(a b c d) 2 '(2 3))
 
 
-;(define t (letrec ([is-even? (lambda (n)
-;                       (or (zero? n)
-;                           (is-odd? (sub1 n))))]
-;           [is-odd? (lambda (n)
-;                      (and (not (zero? n))
-;                           (is-even? (sub1 n))))])
-;    (is-odd? 11)))
-(define x 0)
-
-(define (l x)
-  (set! x (add1 x))
-  x)
-
-(define ct (let ([c x]
-                 [b 8])
-            (lambda ()
-              (set! c (add1 c))
-              (set! b (add1 b))
-              (list b c))))
-
-(define cd (let ([c x])
-            (lambda ()
-              (set! c (add1 c))
-              c)))
-
+(define t (letrec ([is-even? (lambda (n)
+                       (or (zero? n)
+                           (is-odd? (sub1 n))))]
+           [is-odd? (lambda (n)
+                      (and (not (zero? n))
+                           (is-even? (sub1 n))))])
+    (is-odd? 11)))
 

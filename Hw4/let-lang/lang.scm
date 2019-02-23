@@ -16,18 +16,17 @@
       [identifier
        (letter (arbno (or letter digit "_" "-" "?")))
        symbol]
-      [number (digit (arbno digit)) number]
-      [number ("-" digit (arbno digit)) number]
-      ;[bool ((or "#t" "#f")) bool]
+      [letnumber (digit (arbno digit)) number]
+      [letnumber ("-" digit (arbno digit)) number]
       ))
   
   (define the-grammar
     '([program (expression) a-program]
 
-      [expression (number) const-exp]
+      [expression (letnumber) const-exp]
       [expression
-       ("-" "(" expression "," expression ")")
-       diff-exp]
+        ("-" "(" expression "," expression ")")
+        diff-exp]
       
       [expression
        ("zero?" "(" expression ")")
@@ -42,51 +41,18 @@
       [expression
        ("let" identifier "=" expression "in" expression)
        let-exp]
-
-      [expression
-       ("minus" "(" expression ")")
-       minus]
       
       [expression
-       ("+" "(" expression "," expression ")")
-       add-exp]
+       ("letrec" identifier "(" identifier (arbno "," identifier) ")" "=" expression "in" expression)
+       letrec-exp]
 
       [expression
-       ("*" "(" expression "," expression ")")
-       mul-exp]
+       ("proc" "(" identifier (arbno "," identifier) ")" expression)
+       proc-exp]
 
       [expression
-       ("/" "(" expression "," expression ")")
-       quotient-exp]
-
-      [expression
-       ("equal?" "(" expression "," expression ")")
-       equal?-exp]
-
-      [expression
-       ("greater?" "(" expression "," expression ")")
-       greater?-exp]
-
-      [expression
-       ("less?" "(" expression "," expression ")")
-       less?-exp]
-
-      [expression
-       ("#t")
-       const-true]
-
-      [expression
-       ("#f")
-       const-false]
-      
-      [expression
-       ("cond" (arbno expression "==>" expression) "end" )
-       cond-exp]
-
-      [expression
-       ("print" "(" expression ")")
-       print-exp]
-
+       ( "(" expression (arbno expression) ")" )
+       call-exp]
 
       ))
   
