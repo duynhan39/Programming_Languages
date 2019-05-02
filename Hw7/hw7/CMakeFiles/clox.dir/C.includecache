@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/duynhan/Programming/UE/CS380/Hw/Hw7/hw7/chunk.c
+stdlib.h
+-
+chunk.h
+/Users/duynhan/Programming/UE/CS380/Hw/Hw7/hw7/chunk.h
+memory.h
+/Users/duynhan/Programming/UE/CS380/Hw/Hw7/hw7/memory.h
+value.h
+/Users/duynhan/Programming/UE/CS380/Hw/Hw7/hw7/value.h
+
+/Users/duynhan/Programming/UE/CS380/Hw/Hw7/hw7/chunk.h
+common.h
+/Users/duynhan/Programming/UE/CS380/Hw/Hw7/hw7/common.h
+value.h
+/Users/duynhan/Programming/UE/CS380/Hw/Hw7/hw7/value.h
+
+/Users/duynhan/Programming/UE/CS380/Hw/Hw7/hw7/common.h
+stdbool.h
+-
+stddef.h
+-
+stdint.h
+-
+
+/Users/duynhan/Programming/UE/CS380/Hw/Hw7/hw7/memory.h
+stdlib.h
+-
+
+/Users/duynhan/Programming/UE/CS380/Hw/Hw7/hw7/value.h
+

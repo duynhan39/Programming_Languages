@@ -1,0 +1,39 @@
+== test chunk ==
+0000  123 OP_CONSTANT              0 '5'
+0002    | OP_CONSTANT              1 '7.5'
+0004    | OP_CONSTANT              2 '0'
+0006    | OP_CONSTANT              3 '5'
+0008    | OP_LONG_CONSTANT         4 '9090'
+0012    | OP_CONSTANT              5 '5'
+0014    | OP_DIV
+0015    | OP_MUL
+0016    | OP_ADD
+0017    | OP_ADD
+0018    | OP_ADD
+0019    | OP_RETURN
+== Running ==
+         
+0000  123 OP_CONSTANT              0 '5'
+         [ 5 ]
+0002    | OP_CONSTANT              1 '7.5'
+         [ 5 ][ 7.5 ]
+0004    | OP_CONSTANT              2 '0'
+         [ 5 ][ 7.5 ][ 0 ]
+0006    | OP_CONSTANT              3 '5'
+         [ 5 ][ 7.5 ][ 0 ][ 5 ]
+0008    | OP_LONG_CONSTANT         4 '9090'
+         [ 5 ][ 7.5 ][ 0 ][ 5 ][ 5 ]
+0012    | OP_CONSTANT              5 '5'
+         [ 5 ][ 7.5 ][ 0 ][ 5 ][ 5 ][ 5 ]
+0014    | OP_DIV
+         [ 5 ][ 7.5 ][ 0 ][ 5 ][ 1 ]
+0015    | OP_MUL
+         [ 5 ][ 7.5 ][ 0 ][ 5 ]
+0016    | OP_ADD
+         [ 5 ][ 7.5 ][ 5 ]
+0017    | OP_ADD
+         [ 5 ][ 12.5 ]
+0018    | OP_ADD
+         [ 17.5 ]
+0019    | OP_RETURN
+17.5

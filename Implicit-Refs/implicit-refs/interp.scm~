@@ -49,7 +49,8 @@
                            (bool-val #f)))))
 
         (not-exp (exp)
-                 (let ((val1 (value-of exp env)))           
+                 (let ((val1 (value-of exp env)))
+                     
                    (if (expval->bool val1)
                        (bool-val #f)
                        (bool-val #t))))
@@ -131,6 +132,7 @@
                     (for-each (lambda (s)
                                 (result-of s env))
                               (cons stmt stmts))]
+
      
         [if-stmt (condition stmt1 stmt2)
                  (let ((cndt (value-of condition env)))
@@ -140,6 +142,7 @@
 
         [while-stmt  (condition stmt)
                      (let while-loop()
+                     
                        (let ((cndt (value-of condition env)))
                          (if (expval->bool cndt)
                              (begin
