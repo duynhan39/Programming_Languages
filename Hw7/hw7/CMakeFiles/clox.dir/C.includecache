@@ -30,9 +30,47 @@ stddef.h
 stdint.h
 -
 
+/Users/duynhan/Programming/UE/CS380/Hw/Hw7/hw7/debug.c
+stdio.h
+-
+debug.h
+/Users/duynhan/Programming/UE/CS380/Hw/Hw7/hw7/debug.h
+value.h
+/Users/duynhan/Programming/UE/CS380/Hw/Hw7/hw7/value.h
+
+/Users/duynhan/Programming/UE/CS380/Hw/Hw7/hw7/debug.h
+chunk.h
+/Users/duynhan/Programming/UE/CS380/Hw/Hw7/hw7/chunk.h
+
+/Users/duynhan/Programming/UE/CS380/Hw/Hw7/hw7/main.c
+common.h
+/Users/duynhan/Programming/UE/CS380/Hw/Hw7/hw7/common.h
+chunk.h
+/Users/duynhan/Programming/UE/CS380/Hw/Hw7/hw7/chunk.h
+debug.h
+/Users/duynhan/Programming/UE/CS380/Hw/Hw7/hw7/debug.h
+vm.h
+/Users/duynhan/Programming/UE/CS380/Hw/Hw7/hw7/vm.h
+stdio.h
+-
+
 /Users/duynhan/Programming/UE/CS380/Hw/Hw7/hw7/memory.h
 stdlib.h
 -
 
+/Users/duynhan/Programming/UE/CS380/Hw/Hw7/hw7/value.c
+stdio.h
+-
+memory.h
+/Users/duynhan/Programming/UE/CS380/Hw/Hw7/hw7/memory.h
+value.h
+/Users/duynhan/Programming/UE/CS380/Hw/Hw7/hw7/value.h
+
+/Users/duynhan/Programming/UE/CS380/Hw/Hw7/hw7/value.h
+
+/Users/duynhan/Programming/UE/CS380/Hw/Hw7/hw7/vm.h
+chunk.h
+/Users/duynhan/Programming/UE/CS380/Hw/Hw7/hw7/chunk.h
+value.h
 /Users/duynhan/Programming/UE/CS380/Hw/Hw7/hw7/value.h
 

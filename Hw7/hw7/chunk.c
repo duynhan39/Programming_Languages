@@ -41,7 +41,7 @@ void writeLongChunk(Chunk* chunk, uint32_t byte, int line) {
     }
     
     for(int i=0; i<3; i++) {
-        chunk->code[chunk->count + i] = (byte >> i*8) & 0xFF;
+        chunk->code[chunk->count] = (byte >> i*8) & 0xFF;
         chunk->lines[chunk->count] = line;
         chunk->count++;
     }
