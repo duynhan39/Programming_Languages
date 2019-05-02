@@ -36,17 +36,6 @@ int main(int argc, const char* argv[]) {
     writeChunk(&chunk, OP_SUB, 123);
     writeChunk(&chunk, OP_ADD, 123);
     
-    
-    printf("OP_CONSTANT %d\n", OP_CONSTANT);
-    printf("OP_LONG_CONSTANT %d\n", OP_LONG_CONSTANT);
-    printf("OP_ADD %d\n", OP_ADD);
-    printf("OP_MUL %d\n", OP_MUL);
-    printf("OP_DIV %d\n", OP_DIV);
-    
-    for(int i=0; i<chunk.count; i++) {
-        printf("= %d\n", chunk.code[i]);
-    }
-    
     writeChunk(&chunk, OP_RETURN, 123);
 
     disassembleChunk(&chunk, "test chunk");
